@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Helvetica Neue Cyr Bold";
+  src: url("./assets/fonts/HelveticaNeueCyr-Bold.eot");
+  src: url("./assets/fonts/HelveticaNeueCyr-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff"),
+    url("./assets/fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.EZDrawer {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .EZDrawer {
+    display: none;
+  }
+}
+
+#welcome,
+#about,
+#gallery,
+#team,
+#roadmap {
+  scroll-margin-top: 3.2rem;
+}
+
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+:root {
+  font-family: "Helvetica Neue Cyr Bold", Helvetica, sans-serif;
+  line-height: 18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mySwiper {
+  cursor: pointer;
+}
+
+@keyframes running-line {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-300px, 0);
+  }
+}
