@@ -1,53 +1,33 @@
 import { useState } from "react";
 import styled from "@emotion/styled";
 
-import * as palette from "../variables";
+import { colors, breakpoints } from "../variables";
+import { TWITTER_LINK, DISCORD_LINK } from "../config";
+
+import { DrawerMenu } from "./DrawerMenu";
 
 import { DiscordIcon, TwitterIcon, MenuIcon } from "../assets/icons/icons";
-
-import { TWITTER_LINK, DISCORD_LINK } from "../config";
-import { DrawerMenu } from "./DrawerMenu";
 
 export const MenuListItems = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
     <>
       <NavListItem>
-        <NavLink
-          onClick={() => {
-            closeMenu();
-          }}
-          href="#about"
-        >
+        <NavLink onClick={closeMenu} href="#about">
           About
         </NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink
-          onClick={() => {
-            closeMenu();
-          }}
-          href="#gallery"
-        >
+        <NavLink onClick={closeMenu} href="#gallery">
           Gallery
         </NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink
-          onClick={() => {
-            closeMenu();
-          }}
-          href="#team"
-        >
+        <NavLink onClick={closeMenu} href="#team">
           Team
         </NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink
-          onClick={() => {
-            closeMenu();
-          }}
-          href="#roadmap"
-        >
+        <NavLink onClick={closeMenu} href="#roadmap">
           Roadmap
         </NavLink>
       </NavListItem>
@@ -98,11 +78,11 @@ export function Header() {
 
 const NavLink = styled.a`
   margin: 0 1.2rem;
-  color: ${palette.colors.white};
+  color: ${colors.white};
   text-transform: uppercase;
 
   &:hover {
-    color: ${palette.colors.purple};
+    color: ${colors.purple};
   }
 `;
 
@@ -117,7 +97,7 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  background-color: #000000;
+  background-color: ${colors.black};
   padding: 0.6rem 0.8rem;
 `;
 
@@ -125,7 +105,7 @@ const LogoNavLink = styled(NavLink)`
   display: none;
   margin-left: 0;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     display: flex;
   }
 `;
@@ -133,7 +113,7 @@ const LogoNavLink = styled(NavLink)`
 const StyledMenuList = styled.ul`
   display: none;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     display: flex;
   }
 `;
@@ -142,10 +122,9 @@ export const MenuIconButton = styled.button`
   width: 2.5rem;
   height: 2.2rem;
   justify-self: end;
-  /* align-self: flex-end; */
   box-sizing: border-box;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     display: none;
   }
 `;
@@ -165,7 +144,7 @@ export const NavIconLink = styled.a`
 
   &:hover {
     svg path {
-      fill: #6658fd;
+      fill: ${colors.purple};
     }
   }
 `;

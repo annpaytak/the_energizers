@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 
 import { font } from "../mixins";
+import { colors } from "../variables";
 
 import Homepage1 from "../assets/homepage_1.png";
 import Homepage2 from "../assets/homepage_2.png";
@@ -153,7 +154,7 @@ const Description = styled.p`
 `;
 
 const WelcomeSection = styled.section`
-  background-color: #6658fd;
+  background-color: ${colors.purple};
 
   position: relative;
   display: grid;

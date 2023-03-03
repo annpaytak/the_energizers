@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 import { headlineW, SectionHeadline } from "../mixins";
-import * as palette from "../variables";
+import { colors, breakpoints } from "../variables";
 
 import EmotionalCircle from "../assets/emotional_circkle.png";
 
@@ -37,10 +37,10 @@ export function About() {
 const AboutSection = styled.section`
   display: grid;
   height: 100%;
-  background-color: #000000;
+  background-color: ${colors.black};
   padding-bottom: 3rem;
 
-  color: #ffffff;
+  color: ${colors.white};
 `;
 
 const ContentWrapper = styled.div`
@@ -53,7 +53,7 @@ const ContentWrapper = styled.div`
   grid-template-rows: auto auto;
   grid-template-columns: auto;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     width: 86vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -78,7 +78,7 @@ const EmotionalCircleImg = styled.img`
   width: ${headlineW};
   margin-bottom: 3rem;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     width: 60vw;
   }
 `;

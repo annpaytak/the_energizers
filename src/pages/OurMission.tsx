@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 import { headlineW, contentPY, font, SectionHeadline } from "../mixins";
-import * as palette from "../variables";
+import { colors, breakpoints } from "../variables";
 
 export function OurMission() {
   return (
@@ -31,7 +31,7 @@ const OurMissionSection = styled.section`
   height: 100%;
   position: relative;
   display: flex;
-  background-color: ${palette.colors.pink};
+  background-color: ${colors.pink};
 `;
 
 const OurMissionContentWrapper = styled.div`
@@ -45,7 +45,7 @@ const OurMissionContentWrapper = styled.div`
   grid-template-columns: auto;
   column-gap: 6%;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -53,7 +53,7 @@ const OurMissionContentWrapper = styled.div`
 
 const OurMissionContent = styled.div`
   width: 100%;
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     width: auto;
   }
   padding: 1.4rem 0 0.9rem 0;

@@ -4,17 +4,17 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 import { font } from "../mixins";
-import * as palette from "../variables";
-
-import { DiscordIcon, TwitterIcon, MenuCloseIcon } from "../assets/icons/icons";
-
+import { colors, breakpoints } from "../variables";
 import { TWITTER_LINK, DISCORD_LINK } from "../config";
+
 import {
   MenuIconButton,
   MenuListItems,
   NavListItem,
   NavIconLink,
 } from "./Header";
+
+import { DiscordIcon, TwitterIcon, MenuCloseIcon } from "../assets/icons/icons";
 
 export function DrawerMenu({
   open,
@@ -64,7 +64,7 @@ const StyledMenu = styled.div`
 
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: ${colors.black};
   padding: 1.2rem;
 `;
 
@@ -76,16 +76,16 @@ const StyledMenuListMobile = styled.ul`
     height: auto;
     margin: 0.5rem 0;
     a {
-      ${font({ size: "15vw", color: palette.colors.white })};
+      ${font({ size: "15vw", color: colors.white })};
       text-transform: uppercase;
 
-      @media (min-width: ${palette.breakpoints.sm}) {
-        ${font({ size: "10vw", color: palette.colors.white })};
+      @media (min-width: ${breakpoints.sm}) {
+        ${font({ size: "10vw", color: colors.white })};
       }
     }
   }
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     display: none;
   }
 `;

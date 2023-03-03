@@ -6,7 +6,7 @@ import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { breakpointsNums } from "../variables";
+import { breakpointsNums, colors } from "../variables";
 import { SectionHeadlineSmall } from "../mixins";
 
 import { LeftArrowIcon } from "../assets/icons/icons";
@@ -94,9 +94,9 @@ export function Gallery() {
 
 const GallerySection = styled.section`
   position: relative;
-  background-color: #000000;
+  background-color: ${colors.black};
 
-  color: #ffffff;
+  color: ${colors.white};
 
   .swiper-button-next::after,
   .swiper-button-prev::after {

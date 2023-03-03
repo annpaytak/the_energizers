@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
 import { contentPY, headlineRest, font } from "../mixins";
-import * as palette from "../variables";
+import { TWITTER_LINK, DISCORD_LINK } from "../config";
+import { colors, breakpoints } from "../variables";
+
+import { NavIconLink } from "../components/Header";
 
 import { DiscordIcon, TwitterIcon } from "../assets/icons/icons";
-
-import { TWITTER_LINK, DISCORD_LINK } from "../config";
-import { NavIconLink } from "../components/Header";
 
 export function Footer() {
   return (
@@ -36,23 +36,23 @@ const FooterStyled = styled.footer`
   padding-top: ${contentPY};
   padding-bottom: ${contentPY};
 
-  background-color: #000000;
+  background-color: ${colors.black};
   display: grid;
   grid-template-rows: auto auto auto;
   row-gap: 2.2rem;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     padding-left: ${headlineRest};
     padding-right: ${headlineRest};
   }
 
-  color: #ffffff;
+  color: ${colors.white};
 `;
 
 const FooterText = styled.p`
-  ${font({ size: "1.75rem", color: palette.colors.white })};
+  ${font({ size: "1.75rem", color: colors.white })};
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -60,8 +60,8 @@ const FooterText = styled.p`
   grid-row-start: 1;
   grid-row-end: 2;
 
-  @media (min-width: ${palette.breakpoints.md}) {
-    ${font({ size: "2.25rem", color: palette.colors.white })};
+  @media (min-width: ${breakpoints.md}) {
+    ${font({ size: "2.25rem", color: colors.white })};
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -70,16 +70,16 @@ const FooterText = styled.p`
     text-align: left;
   }
 
-  background-color: #000000;
+  background-color: ${colors.black};
   display: flex;
   flex-direction: column;
 
-  color: #ffffff;
+  color: ${colors.white};
 `;
 
 const FooterCText = styled.p`
   display: flex;
-  ${font({ size: "1.125rem", color: palette.colors.white })};
+  ${font({ size: "1.125rem", color: colors.white })};
   text-align: center;
   margin: 0;
 
@@ -90,7 +90,7 @@ const FooterCText = styled.p`
     margin-right: 0.4rem;
   }
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -99,11 +99,11 @@ const FooterCText = styled.p`
     display: inline;
     text-align: left;
   }
-  background-color: #000000;
+  background-color: ${colors.black};
   display: flex;
   flex-direction: column;
 
-  color: #ffffff;
+  color: ${colors.white};
 `;
 
 const FooterSocials = styled.div`
@@ -112,13 +112,13 @@ const FooterSocials = styled.div`
 
   display: flex;
   justify-content: center;
-  background-color: #000000;
+  background-color: ${colors.black};
 
   & > a {
     margin: 0 1rem;
   }
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;

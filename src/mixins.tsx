@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import * as palette from "./variables";
+import { colors, breakpoints } from "./variables";
 
 export const headlineW = 86 + "vw";
 export const contentPY = "12vw";
@@ -20,7 +20,7 @@ export const font = ({
   font-weight: 700;
   font-size: ${size || "1rem"};
   line-height: ${leading || size || "1rem"};
-  color: ${color || palette.colors.black};
+  color: ${color || colors.black};
 `;
 
 const headlineSmall = ({ content }: { content: string }) => css`
@@ -43,15 +43,15 @@ const headlineSmall = ({ content }: { content: string }) => css`
 `;
 
 export const SectionHeadline = styled.h2<{ right?: string; content: string }>`
-  @media (min-width: ${palette.breakpoints.xl}) {
+  @media (min-width: ${breakpoints.xl}) {
     // xl or lg
     font-size: 120px;
   }
   ${({ content }) => headlineSmall({ content })};
   width: 100%;
 
-  @media (min-width: ${palette.breakpoints.md}) {
-    // or md check on roman tablet
+  @media (min-width: ${breakpoints.md}) {
+    // or md check on tablet
     position: relative;
     width: fit-content;
     margin: 0;

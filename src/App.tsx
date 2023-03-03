@@ -2,7 +2,7 @@ import { lazy } from "react";
 import styled from "@emotion/styled";
 
 import { font } from "./mixins";
-import * as palette from "./variables";
+import { colors, breakpoints } from "./variables";
 
 const Header = lazy(() =>
   import("./components/Header").then(({ Header }) => ({ default: Header }))
@@ -67,7 +67,7 @@ function App() {
 }
 
 const Page = styled.div`
-  background-color: #f5f5f5;
+  background-color: ${colors.bg};
 `;
 
 const RunningLine = styled.div`
@@ -78,11 +78,11 @@ const RunningLine = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: ${palette.colors.black};
+  background-color: ${colors.black};
 
   p {
     margin: 0;
-    ${font({ size: "2.5rem", color: palette.colors.white })};
+    ${font({ size: "2.5rem", color: colors.white })};
 
     text-transform: uppercase;
 
@@ -94,12 +94,12 @@ const RunningLine = styled.div`
     }
   }
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     height: 8rem;
     padding: 2rem 0 1rem 0;
 
     p {
-      ${font({ size: "8rem", color: palette.colors.white })};
+      ${font({ size: "8rem", color: colors.white })};
     }
   }
 `;

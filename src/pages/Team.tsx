@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
 
 import { contentPY, font, SectionHeadlineSmall } from "../mixins";
-import * as palette from "../variables";
+import { colors, breakpoints } from "../variables";
+import { TWITTER_KRISTI_LINK } from "../config";
 
 import { EnergizerIcon, TwitterIcon } from "../assets/icons/icons";
-
-import { TWITTER_KRISTI_LINK } from "../config";
 
 export function Team() {
   return (
@@ -13,7 +12,7 @@ export function Team() {
       <SectionHeadlineSmall content="05">Team</SectionHeadlineSmall>
       <Members>
         <Member>
-          <EnergizerIcon fill="#79F2CA" />
+          <EnergizerIcon fill={colors.aquaGreen} />
           <Name>Sofi</Name>
           <Title>
             <span>Ceo</span>
@@ -23,20 +22,20 @@ export function Team() {
         </Member>
 
         <Member>
-          <EnergizerIcon fill="#6658FD" />
+          <EnergizerIcon fill={colors.purple} />
           <Name>Kristi</Name>
           <Title>
             <span>Founder</span>
             <span>Graphic designer</span>
             <span>Artist</span>
             <MemberSocialLink href={TWITTER_KRISTI_LINK} target="_blank">
-              <TwitterIcon fill="#000000" width="100%" height="27px" />
+              <TwitterIcon fill={colors.black} width="100%" height="27px" />
             </MemberSocialLink>
           </Title>
         </Member>
 
         <Member>
-          <EnergizerIcon fill="#FD445A" />
+          <EnergizerIcon fill={colors.pink} />
           <Name>Ann</Name>
           <Title> Developer</Title>
         </Member>
@@ -46,7 +45,7 @@ export function Team() {
 }
 
 const TeamSection = styled.section`
-  background-color: #ff7fc2;
+  background-color: ${colors.lightPink};
 `;
 
 const Members = styled.div`
@@ -55,13 +54,13 @@ const Members = styled.div`
   padding-bottom: ${contentPY};
 
   height: 100%;
-  background-color: #ffffff;
+  background-color: ${colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
 
-  @media (min-width: ${palette.breakpoints.sm}) {
+  @media (min-width: ${breakpoints.sm}) {
     flex-direction: row;
   }
 `;
@@ -80,11 +79,11 @@ const Member = styled.div`
   margin: 3.2rem;
   max-width: unset;
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     max-width: 15vw;
   }
 
-  @media (min-width: ${palette.breakpoints.sm}) {
+  @media (min-width: ${breakpoints.sm}) {
     margin: 0;
   }
 `;

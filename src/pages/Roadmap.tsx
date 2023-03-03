@@ -7,7 +7,7 @@ import {
   font,
   SectionHeadline,
 } from "../mixins";
-import * as palette from "../variables";
+import { colors, breakpoints } from "../variables";
 
 const roadmap = [
   "Website creation & launch",
@@ -41,7 +41,7 @@ export function Roadmap() {
 }
 
 const RoadmapSection = styled.section`
-  background-color: #000000;
+  background-color: ${colors.black};
   padding-top: ${contentPY};
   padding-bottom: ${contentPY};
 
@@ -51,23 +51,23 @@ const RoadmapSection = styled.section`
     width: ${headlineW};
   }
 
-  @media (min-width: ${palette.breakpoints.md}) {
+  @media (min-width: ${breakpoints.md}) {
     h2 {
       padding-bottom: 5vw;
       width: fit-content;
     }
   }
 
-  color: #ffffff;
+  color: ${colors.white};
 `;
 
 const TCell = styled.td`
   width: auto;
   padding: 0.6rem;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid ${colors.white};
+  border-bottom: 1px solid ${colors.white};
 
-  @media (min-width: ${palette.breakpoints.sm}) {
+  @media (min-width: ${breakpoints.sm}) {
     width: 17%;
     padding: 0.6rem;
     padding-left: ${headlineRest};
@@ -78,12 +78,12 @@ const TCellText = styled.td`
   width: auto;
 
   padding: 0.6rem;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid ${colors.white};
+  border-bottom: 1px solid ${colors.white};
 
   ${font({ size: "1.125rem", color: "inherit" })};
 
-  @media (min-width: ${palette.breakpoints.sm}) {
+  @media (min-width: ${breakpoints.sm}) {
     width: 83%;
   }
 
