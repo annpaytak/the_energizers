@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
-import Drawer from "react-modern-drawer";
-import "react-modern-drawer/dist/index.css";
+import Drawer from "rc-drawer";
+import "rc-drawer/assets/index.css";
 
 import { font } from "../mixins";
 import { colors, breakpoints } from "../variables";
@@ -24,7 +24,17 @@ export function DrawerMenu({
   closeMenu: () => void;
 }) {
   return (
-    <Drawer size="100vh" open={open} onClose={closeMenu} direction="top">
+    <Drawer
+      autoFocus={false}
+      maskClosable={true}
+      open={open}
+      onClose={closeMenu}
+      height="100vh"
+      style={{
+        width: "100vw",
+      }}
+      placement="top"
+    >
       <StyledMenu>
         <MenuIconButton onClick={closeMenu}>
           <MenuCloseIcon />
