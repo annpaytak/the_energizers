@@ -13,7 +13,7 @@ import { TwitterIcon } from "../assets/icons/icons";
 export function Team() {
   return (
     <TeamSection id="team">
-      <SectionHeadlineSmall content="05">Team</SectionHeadlineSmall>
+      <TeamHeadline content="05">Team</TeamHeadline>
       <Members>
         <Member>
           <Photo src={X} />
@@ -53,6 +53,10 @@ export function Team() {
 
 const TeamSection = styled.section`
   background-color: ${colors.lightPink};
+`;
+
+const TeamHeadline = styled(SectionHeadlineSmall)`
+  line-height: 5.8rem;
 `;
 
 const Members = styled.div`

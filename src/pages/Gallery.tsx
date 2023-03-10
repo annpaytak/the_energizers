@@ -62,7 +62,7 @@ export function Gallery() {
         >
           <LeftArrowIcon />
         </GalleryArrowButton>
-        <SectionHeadlineSmall content="03">Gallery</SectionHeadlineSmall>
+        <GalleryHeadline content="03">Gallery</GalleryHeadline>
         <GalleryArrowButton
           ref={(node) => setNextEl(node)}
           className="swiper-button-next"
@@ -111,12 +111,18 @@ const GallerySection = styled.section`
   }
 `;
 
+const GalleryHeadline = styled(SectionHeadlineSmall)`
+  line-height: 5.4rem;
+  margin-top: 0.4rem;
+`;
+
 const GalleryArrowButton = styled.button`
   display: none;
   height: 100%;
   position: static;
   margin: 0;
-  width: 3rem;
+  min-width: 28px;
+  min-height: 28px;
 
   &:first-of-type {
     margin-left: 1.5rem;
