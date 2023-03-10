@@ -32,6 +32,7 @@ export function DrawerMenu({
       height="100vh"
       style={{
         width: "100vw",
+        overflow: "hidden",
       }}
       placement="top"
     >

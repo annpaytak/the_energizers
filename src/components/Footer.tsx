@@ -113,9 +113,11 @@ const FooterSocials = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${colors.black};
+  color: ${colors.white};
 
   & > a {
     padding: 0.45rem 1.45rem;
+    color: ${colors.white};
   }
 
   @media (min-width: ${breakpoints.md}) {
