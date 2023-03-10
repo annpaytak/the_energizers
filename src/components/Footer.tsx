@@ -21,12 +21,16 @@ export function Footer() {
       </FooterCText>
 
       <FooterSocials>
-        <NavIconLink href={TWITTER_LINK} target="_blank">
-          <TwitterIcon width="100%" height="86px" />
-        </NavIconLink>
-        <NavIconLink href={DISCORD_LINK} target="_blank">
-          <DiscordIcon width="100%" height="86px" />
-        </NavIconLink>
+        <li>
+          <NavIconLink href={TWITTER_LINK} target="_blank">
+            <TwitterIcon width="100%" height="86px" />
+          </NavIconLink>
+        </li>
+        <li>
+          <NavIconLink href={DISCORD_LINK} target="_blank">
+            <DiscordIcon width="100%" height="86px" />
+          </NavIconLink>
+        </li>
       </FooterSocials>
     </FooterStyled>
   );
@@ -106,7 +110,8 @@ const FooterCText = styled.p`
   color: ${colors.white};
 `;
 
-const FooterSocials = styled.div`
+const FooterSocials = styled.ul`
+  width: 100%;
   grid-row-start: 2;
   grid-row-end: 3;
 
@@ -115,8 +120,8 @@ const FooterSocials = styled.div`
   background-color: ${colors.black};
   color: ${colors.white};
 
-  & > a {
-    padding: 0.45rem 1.45rem;
+  a {
+    margin: 0.45rem 1.45rem;
     color: ${colors.white};
   }
 

@@ -31,6 +31,7 @@ export function DrawerMenu({
       onClose={closeMenu}
       height="100vh"
       style={{
+        position: "fixed",
         width: "100vw",
         overflow: "hidden",
       }}
