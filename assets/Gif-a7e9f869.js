@@ -1,4 +1,4 @@
-import{a as i,n,c as o,d as t,b as a}from"./index-bd279ba7.js";const s="/assets/animation-cd04fcc4.gif";function e(){return i(c,{children:i(m,{src:s,alt:""})})}const c=n.section`
+import{a as i,n,c as o,d as t,b as a}from"./index-bc3ec08d.js";const s="/assets/animation-cd04fcc4.gif";function e(){return i(c,{children:i(m,{src:s,alt:""})})}const c=n.section`
   display: grid;
   justify-items: center;
   height: 100%;
