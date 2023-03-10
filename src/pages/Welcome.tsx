@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 
 import { font } from "../mixins";
-import { colors } from "../variables";
+import { colors, breakpoints } from "../variables";
 
 import Homepage1 from "../assets/homepage_1.png";
 import Homepage2 from "../assets/homepage_2.png";
@@ -93,7 +93,11 @@ const AnimationImg = styled.img`
   &.active {
     opacity: 1;
 
-    @media (min-width: 768px) {
+    @media (min-width: ${breakpoints.md}) {
+      height: 80vh;
+    }
+
+    @media (min-width: ${breakpoints.lg}) {
       height: 100vh;
     }
 
@@ -104,12 +108,12 @@ const AnimationImg = styled.img`
 const AnimationItem = styled.div`
   position: absolute;
   margin: auto;
-  top: 0%;
+  top: 0;
   bottom: 0;
   width: auto;
   height: fit-content;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.lg}) {
     top: 5%;
   }
 `;
@@ -134,9 +138,8 @@ const Headline = styled.h1`
   text-align: center;
   text-transform: uppercase;
 
-  // text biggest screen
-  @media (min-width: 1536px) {
-    ${font({ size: "10rem" })};
+  @media (min-width: ${breakpoints["xl"]}) {
+    ${font({ size: "8rem" })};
   }
 `;
 
@@ -148,29 +151,35 @@ const Description = styled.p`
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.md}) {
     ${font({ size: "2.25rem" })};
   }
 `;
 
 const WelcomeSection = styled.section`
   background-color: ${colors.purple};
-
   position: relative;
   display: grid;
   grid-template-rows: 12vw 2fr 1fr;
-
   justify-items: center;
-  padding-top: 4.75rem;
-
+  padding-top: 6rem;
   height: calc(100vh - 50px);
+
+  @media (min-width: ${breakpoints.md}) {
+    padding-top: 4.75rem;
+    grid-template-rows: 12vw 3fr 1fr;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    grid-template-rows: 12vw 2fr 2fr;
+  }
 `;
 
 const EnergizerIconStyled = styled(EnergizerIcon)`
   width: 73px;
   height: fit-content;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.md}) {
     width: 92px;
     height: 128px;
   }

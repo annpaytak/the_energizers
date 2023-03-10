@@ -41,22 +41,27 @@ const OurMissionContentWrapper = styled.div`
   margin-bottom: ${contentPY};
 
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-columns: auto;
-  column-gap: 6%;
 
   @media (min-width: ${breakpoints.md}) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-rows: auto;
   }
 `;
 
 const OurMissionContent = styled.div`
   width: 100%;
+  margin-top: 2rem;
+
+  p {
+    ${font({ size: "1rem", color: "inherit", leading: 1 })};
+  }
+
   @media (min-width: ${breakpoints.md}) {
     width: auto;
+    margin-top: 0;
   }
-  padding: 1.4rem 0 0.9rem 0;
 
   display: flex;
   flex-direction: column;
@@ -66,11 +71,9 @@ const OurMissionTitle = styled.p`
   margin: 0;
   margin-bottom: 1.2rem;
 
-  ${font({ size: "1.125rem" })};
   text-transform: uppercase;
 `;
 
 const OurMissionDescription = styled.p`
   margin: 0;
-  ${font({ size: "1.125rem" })};
 `;

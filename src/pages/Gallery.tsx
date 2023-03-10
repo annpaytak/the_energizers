@@ -98,6 +98,13 @@ const GallerySection = styled.section`
 
   color: ${colors.white};
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    svg {
+      height: 100px;
+    }
+  }
+
   .swiper-button-next::after,
   .swiper-button-prev::after {
     content: "";
@@ -108,7 +115,15 @@ const GalleryArrowButton = styled.button`
   display: none;
   height: 100%;
   position: static;
-  margin: 0 1.5rem;
+  margin: 0;
+  width: 3rem;
+
+  &:first-of-type {
+    margin-left: 1.5rem;
+  }
+  &:last-of-type {
+    margin-right: 1.5rem;
+  }
 
   @media (min-width: 768px) {
     display: flex;

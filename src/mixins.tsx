@@ -13,13 +13,13 @@ export const font = ({
 }: {
   size?: string;
   color?: string;
-  leading?: string;
+  leading?: string | number;
 }) => css`
   font-family: "Helvetica Neue Cyr Bold", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: ${size || "1rem"};
-  line-height: ${leading || size || "1rem"};
+  line-height: ${leading || size || 1};
   color: ${color || colors.black};
 `;
 
@@ -27,13 +27,11 @@ const headlineSmall = ({ content }: { content: string }) => css`
   position: relative;
   width: ${headlineW};
   margin: 0 auto;
-  padding: 1.4rem 0 0.9rem 0;
-  ${font({ size: "2.5rem", color: "inherit" })};
+  ${font({ size: "2.5rem", color: "inherit", leading: 1 })};
   text-transform: uppercase;
 
   &::after {
     content: "${content}";
-    margin: 1.4rem 0 0.9rem 0;
     position: absolute;
     height: fit-content;
     top: 0;
@@ -43,19 +41,17 @@ const headlineSmall = ({ content }: { content: string }) => css`
 `;
 
 export const SectionHeadline = styled.h2<{ right?: string; content: string }>`
-  @media (min-width: ${breakpoints.xl}) {
-    // xl or lg
-    font-size: 120px;
+  @media (min-width: ${breakpoints.lg}) {
+    ${font({ size: "120px", color: "inherit", leading: 1 })};
   }
   ${({ content }) => headlineSmall({ content })};
   width: 100%;
 
   @media (min-width: ${breakpoints.md}) {
-    // or md check on tablet
     position: relative;
     width: fit-content;
     margin: 0;
-    ${font({ size: "10vw", color: "inherit", leading: "1" })};
+    ${font({ size: "10vw", color: "inherit", leading: "0.95" })};
     text-transform: uppercase;
 
     &::after {
@@ -63,7 +59,7 @@ export const SectionHeadline = styled.h2<{ right?: string; content: string }>`
       position: absolute;
       top: 0;
       right: ${({ right }) => (right ? right : "-4rem")};
-      ${font({ size: "2.25rem", color: "inherit", leading: "2.75rem" })};
+      ${font({ size: "2.25rem", color: "inherit", leading: 1 })};
     }
   }
 `;

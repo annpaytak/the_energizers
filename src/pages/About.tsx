@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { headlineW, SectionHeadline } from "../mixins";
+import { font, headlineW, SectionHeadline } from "../mixins";
 import { colors, breakpoints } from "../variables";
 
 import EmotionalCircle from "../assets/emotional_circkle.png";
@@ -54,8 +54,7 @@ const ContentWrapper = styled.div`
   grid-template-columns: auto;
 
   @media (min-width: ${breakpoints.md}) {
-    width: 86vw;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-rows: auto;
   }
 `;
@@ -63,9 +62,18 @@ const ContentWrapper = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
+
+  @media (min-width: ${breakpoints.md}) {
+    margin-top: 0;
+  }
+
+  p {
+    ${font({ size: "1rem", color: "inherit", leading: 1 })};
+  }
 
   p:first-of-type {
-    margin: 1.6rem 0 0;
+    margin: 0;
   }
 
   p:last-of-type {

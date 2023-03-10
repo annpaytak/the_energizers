@@ -86,10 +86,10 @@ button {
 
 @keyframes running-line {
   0% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translate(-300px, 0);
+    transform: translateX(-100%);
   }
 }

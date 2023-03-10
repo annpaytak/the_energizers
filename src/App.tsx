@@ -51,10 +51,16 @@ function App() {
       <About />
       <OurMission />
       <RunningLine>
-        <p>
-          <span>let's energize each other</span>
-          <span>let's energize each other</span>
-        </p>
+        <div>
+          <p>
+            <span>let's energize each other</span>
+            <span>let's energize each other</span>
+          </p>
+          <p>
+            <span>let's energize each other</span>
+            <span>let's energize each other</span>
+          </p>
+        </div>
       </RunningLine>
       <Gif />
       <Gallery />
@@ -71,7 +77,6 @@ const Page = styled.div`
 `;
 
 const RunningLine = styled.div`
-  position: relative;
   width: 100%;
   height: 2.5rem;
   padding: 1.2rem 0 1rem 0;
@@ -80,21 +85,33 @@ const RunningLine = styled.div`
   white-space: nowrap;
   background-color: ${colors.black};
 
+  & > div {
+    display: flex;
+  }
+
   p {
     margin: 0;
+    min-width: 100%;
+    flex-shrink: 0;
     ${font({ size: "2.5rem", color: colors.white })};
-
     text-transform: uppercase;
+    white-space: nowrap;
 
-    animation: running-line 5s linear 0s infinite;
-    position: absolute;
+    animation-name: running-line;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 
     & > span {
       margin-right: 2.5rem;
+
+      @media (min-width: ${breakpoints.lg}) {
+        margin-right: 5.5rem;
+      }
     }
   }
 
-  @media (min-width: ${breakpoints.md}) {
+  @media (min-width: ${breakpoints.lg}) {
     height: 8rem;
     padding: 2rem 0 1rem 0;
 

@@ -115,7 +115,7 @@ const FooterSocials = styled.div`
   background-color: ${colors.black};
 
   & > a {
-    margin: 0 1rem;
+    padding: 0.45rem 1.45rem;
   }
 
   @media (min-width: ${breakpoints.md}) {
