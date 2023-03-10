@@ -4,8 +4,6 @@ import { contentPY, headlineRest, font } from "../mixins";
 import { TWITTER_LINK, DISCORD_LINK } from "../config";
 import { colors, breakpoints } from "../variables";
 
-import { NavIconLink } from "../components/Header";
-
 import { DiscordIcon, TwitterIcon } from "../assets/icons/icons";
 
 export function Footer() {
@@ -21,16 +19,12 @@ export function Footer() {
       </FooterCText>
 
       <FooterSocials>
-        <li>
-          <NavIconLink href={TWITTER_LINK} target="_blank">
-            <TwitterIcon width="100%" height="86px" />
-          </NavIconLink>
-        </li>
-        <li>
-          <NavIconLink href={DISCORD_LINK} target="_blank">
-            <DiscordIcon width="100%" height="86px" />
-          </NavIconLink>
-        </li>
+        <NavIconLink href={TWITTER_LINK} target="_blank">
+          <TwitterIcon fill={colors.white} width="100" height="86px" />
+        </NavIconLink>
+        <NavIconLink href={DISCORD_LINK} target="_blank">
+          <DiscordIcon fill={colors.white} width="110" height="86px" />
+        </NavIconLink>
       </FooterSocials>
     </FooterStyled>
   );
@@ -110,7 +104,7 @@ const FooterCText = styled.p`
   color: ${colors.white};
 `;
 
-const FooterSocials = styled.ul`
+const FooterSocials = styled.div`
   width: 100%;
   grid-row-start: 2;
   grid-row-end: 3;
@@ -118,12 +112,6 @@ const FooterSocials = styled.ul`
   display: flex;
   justify-content: center;
   background-color: ${colors.black};
-  color: ${colors.white};
-
-  a {
-    margin: 0.45rem 1.45rem;
-    color: ${colors.white};
-  }
 
   @media (min-width: ${breakpoints.md}) {
     grid-column-start: 2;
@@ -133,4 +121,10 @@ const FooterSocials = styled.ul`
 
     justify-content: flex-end;
   }
+`;
+
+const NavIconLink = styled.a`
+  margin: 0.8rem 1.45rem;
+  display: flex;
+  align-items: center;
 `;
