@@ -1,4 +1,4 @@
-import{j as e,a as t,n as i,d,c as r,b as o,i as a,f as n}from"./index-dcdb1750.js";import{a as s,D as c}from"./config-ceeca765.js";import{NavIconLink as l}from"./Header-feffcb9b.js";import{T as g,D as m}from"./icons-2286d943.js";function k(){return e(h,{children:[e(p,{children:["Join us on Twitter ",t("br",{}),"and Discord"]}),e(w,{children:[t("span",{children:"@2023. TheEnergizers."}),t("span",{children:"All rights reserved!"})]}),e(f,{children:[t(l,{href:s,target:"_blank",children:t(g,{width:"100%",height:"86px"})}),t(l,{href:c,target:"_blank",children:t(m,{width:"100%",height:"86px"})})]})]})}const h=i.footer`
+import{j as e,a as t,n as i,d,c as r,b as o,i as a,f as n}from"./index-370f9653.js";import{a as s,D as c}from"./config-ceeca765.js";import{NavIconLink as l}from"./Header-2e05967b.js";import{T as g,D as m}from"./icons-73f352b2.js";function k(){return e(p,{children:[e(h,{children:["Join us on Twitter ",t("br",{}),"and Discord"]}),e(w,{children:[t("span",{children:"@2023. TheEnergizers."}),t("span",{children:"All rights reserved!"})]}),e(f,{children:[t(l,{href:s,target:"_blank",children:t(g,{width:"100%",height:"86px"})}),t(l,{href:c,target:"_blank",children:t(m,{width:"100%",height:"86px"})})]})]})}const p=i.footer`
   padding-top: ${d};
   padding-bottom: ${d};
 
@@ -15,7 +15,7 @@ import{j as e,a as t,n as i,d,c as r,b as o,i as a,f as n}from"./index-dcdb1750.
   }
 
   color: ${r.white};
-`,p=i.p`
+`,h=i.p`
   ${n({size:"1.75rem",color:r.white})};
   text-transform: uppercase;
   text-align: center;
@@ -75,7 +75,7 @@ import{j as e,a as t,n as i,d,c as r,b as o,i as a,f as n}from"./index-dcdb1750.
   background-color: ${r.black};
 
   & > a {
-    margin: 0 1rem;
+    padding: 0.45rem 1.45rem;
   }
 
   @media (min-width: ${o.md}) {
