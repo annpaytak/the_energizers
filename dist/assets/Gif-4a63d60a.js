@@ -1,9 +1,9 @@
-import{a as i,n,c as o,d as t,b as a}from"./index-bc3ec08d.js";const s="/assets/animation-cd04fcc4.gif";function e(){return i(c,{children:i(m,{src:s,alt:""})})}const c=n.section`
+import{j as i,n,d as o,i as t,e as a}from"./index-f4a535f1.js";const s="/assets/animation-cd04fcc4.gif";function e(){return i(m,{children:i(r,{src:s,alt:""})})}const m=n.section`
   display: grid;
   justify-items: center;
   height: 100%;
   background-color: ${o.aqua};
-`,m=n.img`
+`,r=n.img`
   width: 100vw;
   max-width: 622.95px;
   margin-top: ${t};
