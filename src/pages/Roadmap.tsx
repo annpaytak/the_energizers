@@ -10,16 +10,16 @@ import {
 import { colors, breakpoints } from "../variables";
 
 const roadmap = [
-  "Website creation & launch",
+  "Website creation and launch",
   "Growing Meaningful Community on Twitter & Discord",
-  "The energizers NFT Collection Mint",
-  "$ENRG Token creation",
-  "ENRG Token Launch",
-  'Creating a Unique Gallery & Club "THE ENERGIZERS"',
-  "Collaboration with artists and creating different art projects",
-  'Publication and distribution of new projects "THE ENERGIZERS"',
-  'Сreating own universe of "THE ENERGIZERS"',
-  "More to come",
+  "THE ENERGIZERS NFT Collection Mint",
+  "$NRG Community Token Airdrop",
+  'Working on a Digital Gallery "THE ENERGIZERS" in some of XRPL Metaverse',
+  "Collaboration with NFT artists and creating art projects together",
+  "THE ENERGIZERS merchandise",
+  "THE ENERGIZERS Hype events",
+  "THE ENERGIZERS IRL Art Exhibition",
+  "New ideas more to come…",
 ];
 
 export function Roadmap() {

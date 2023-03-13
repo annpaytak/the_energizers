@@ -89,13 +89,17 @@ const NavLink = styled.a`
 const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 11;
   width: 100%;
   box-sizing: border-box;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+
+  @media (min-width: ${breakpoints.md}) {
+    grid-template-columns: 1fr auto 1fr;
+  }
 
   background-color: ${colors.black};
   padding: 0.6rem 0.8rem;
@@ -121,7 +125,7 @@ const StyledMenuList = styled.ul`
 export const MenuIconButton = styled.button`
   width: 2.5rem;
   height: 2.2rem;
-  justify-self: end;
+  justify-self: start;
   box-sizing: border-box;
 
   @media (min-width: ${breakpoints.md}) {
@@ -131,6 +135,7 @@ export const MenuIconButton = styled.button`
 
 const MenuList = styled.ul`
   display: flex;
+  justify-self: end;
 `;
 
 export const NavListItem = styled.li`

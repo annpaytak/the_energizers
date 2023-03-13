@@ -112,6 +112,7 @@ const GallerySection = styled.section`
 `;
 
 const GalleryHeadline = styled(SectionHeadlineSmall)`
+  width: 90vw;
   line-height: 5.4rem;
   margin-top: 0.4rem;
 `;

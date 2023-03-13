@@ -56,6 +56,7 @@ const TeamSection = styled.section`
 `;
 
 const TeamHeadline = styled(SectionHeadlineSmall)`
+  width: 90vw;
   line-height: 5.8rem;
 `;
 
