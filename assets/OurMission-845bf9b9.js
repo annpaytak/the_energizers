@@ -1,4 +1,4 @@
-import{j as e,g as n,S as o,n as i,d as a,h as s,i as t,e as r,f as d}from"./index-f4a535f1.js";function u(){return e(l,{children:n(m,{children:[n(o,{content:"02",right:"14vw",children:["Our ",e("br",{}),"Mission"]}),n(c,{children:[e(p,{children:"We aim to build meaningful friendship with like-minded people."}),e(g,{children:"Together we synergize, we exchange energy and experience. So that we can energize each other, inspary and create something powerful and unique."})]})]})})}const l=i.section`
+import{j as e,g as n,S as o,n as i,d as a,h as s,i as t,e as r,f as d}from"./index-a1c0e167.js";function u(){return e(l,{children:n(m,{children:[n(o,{content:"02",right:"14vw",children:["Our ",e("br",{}),"Mission"]}),n(c,{children:[e(p,{children:"We aim to build meaningful friendship with like-minded people."}),e(g,{children:"Together we synergize, we exchange energy and experience. So that we can energize each other, inspary and create something powerful and unique."})]})]})})}const l=i.section`
   height: 100%;
   position: relative;
   display: flex;
